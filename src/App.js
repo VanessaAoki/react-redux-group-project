@@ -4,7 +4,7 @@ import {
   Route,
 } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import MyProfile from './components/Profile';
+import Profile from './components/Profile';
 import RocketList from './components/Rockets';
 import MissionsLists from './components/Missions';
 
@@ -19,8 +19,8 @@ function App() {
         <Route exact path="/missions">
           <MissionsLists />
         </Route>
-        <Route exact path="/myprofile">
-          <MyProfile />
+        <Route exact path="/profile">
+          <Profile />
         </Route>
       </Switch>
     </>

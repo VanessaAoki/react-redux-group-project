@@ -15,7 +15,7 @@ const NavBar = () => {
     },
     {
       id: 3,
-      path: '/myprofile',
+      path: '/profile',
       text: 'My Profile',
     },
   ];
@@ -23,7 +23,7 @@ const NavBar = () => {
   return (
     <nav className="panel-bg">
       {links.map((link) => (
-        <li key={link.id} className="mx-2">
+        <li key={link.id}>
           <NavLink
             to={link.path}
             exact
