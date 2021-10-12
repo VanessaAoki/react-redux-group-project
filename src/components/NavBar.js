@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../img/planet-logo.png';
 
 const NavBar = () => {
   const links = [
@@ -21,17 +22,21 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="panel-bg">
-      {links.map((link) => (
-        <li key={link.id}>
-          <NavLink
-            to={link.path}
-            exact
-          >
-            {link.text}
-          </NavLink>
-        </li>
-      ))}
+    <nav className="nav-menu">
+      <img className="logo" src={logo} alt="logo" />
+      <ul className="menu-container">
+        {links.map((link) => (
+          <li className="menu-li" key={link.id}>
+            <NavLink
+              to={link.path}
+              exact
+              className="menu-li"
+            >
+              {link.text}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
