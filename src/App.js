@@ -1,21 +1,34 @@
+import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import { Provider } from 'react-redux';
-import Header from './components/Header';
-import Rocket from './pages/Rockets-page';
+import {
+  Switch,
+  Route,
+} from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Profile from './components/Profile';
+import RocketList from './components/Rockets';
+import MissionsLists from './components/Missions';
 
 function App() {
   return (
-  // <Provider store={configureStore}>
-    <Router>
-      <Header />
+    <>
+      <NavBar />
       <Switch>
-        <Route path="/" exact component={Rocket}></Route>
-        {/* <Route path="/missions" component={Missions}></Route> */}
+        <Route path="/" exact component={RocketList}>
+          <RocketList />
+        </Route>
+        <Route path="/missions" component={MissionsLists}>
+          <MissionsLists />
+        </Route>
+        <Route path="/profile" component={Profile}>
+          <Profile />
+        </Route>
+
       </Switch>
-    </Router>
-  // </Provider>
+    </>
   );
 }
 
 export default App;
+
+//! DO NOT FORGET TO CREDIT THE LOGO MAKER <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
