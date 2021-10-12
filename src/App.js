@@ -23,7 +23,6 @@ function App() {
         <Route path="/profile" component={Profile}>
           <Profile />
         </Route>
-
       </Switch>
     </>
   );
