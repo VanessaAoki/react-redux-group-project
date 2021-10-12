@@ -24,6 +24,7 @@ const NavBar = () => {
   return (
     <nav className="nav-menu">
       <img className="logo" src={logo} alt="logo" />
+      <h1>Space Traveler&apos; Hub</h1>
       <ul className="menu-container">
         {links.map((link) => (
           <li className="menu-li" key={link.id}>
