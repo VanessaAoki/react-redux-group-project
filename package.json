@@ -17,7 +17,8 @@
     "redux-thunk": "^2.3.0",
     "remote-redux-devtools": "^0.5.16",
     "uuid": "^8.3.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "eslint-config-airbnb": "^18.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

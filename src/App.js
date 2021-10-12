@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import {
   Switch,
   Route,
@@ -13,15 +14,16 @@ function App() {
     <>
       <NavBar />
       <Switch>
-        <Route exact path="/">
+        <Route path="/" exact component={RocketList}>
           <RocketList />
         </Route>
-        <Route exact path="/missions">
+        <Route path="/missions" component={MissionsLists}>
           <MissionsLists />
         </Route>
-        <Route exact path="/profile">
+        <Route path="/profile" component={Profile}>
           <Profile />
         </Route>
+
       </Switch>
     </>
   );
