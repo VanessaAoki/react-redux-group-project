@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // Some default code
 
 // Actions

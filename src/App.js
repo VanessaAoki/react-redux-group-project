@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
+import { Provider } from 'react-redux';
 import {
   Switch,
   Route,
 } from 'react-router-dom';
+import configureStore from './redux/configureStore';
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
 import RocketList from './components/Rockets';
@@ -12,18 +14,20 @@ import MissionsLists from './components/Missions';
 function App() {
   return (
     <>
-      <NavBar />
-      <Switch>
-        <Route path="/" exact component={RocketList}>
-          <RocketList />
-        </Route>
-        <Route path="/missions" component={MissionsLists}>
-          <MissionsLists />
-        </Route>
-        <Route path="/profile" component={Profile}>
-          <Profile />
-        </Route>
-      </Switch>
+      <Provider store={configureStore}>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact component={RocketList}>
+            <RocketList />
+          </Route>
+          <Route path="/missions" component={MissionsLists}>
+            <MissionsLists />
+          </Route>
+          <Route path="/profile" component={Profile}>
+            <Profile />
+          </Route>
+        </Switch>
+      </Provider>
     </>
   );
 }
