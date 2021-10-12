@@ -12,10 +12,10 @@ class Header extends React.Component {
           <Link to="/">
             <li className="menu-li">Rockets</li>
           </Link>
-          <Link to="missions/">
+          <Link to="/missions">
             <li className="menu-li">Missions</li>
           </Link>
-          <Link to="my-profile/">
+          <Link to="/my-profile">
             <li className="menu-li">My Profile</li>
           </Link>
         </ul>
