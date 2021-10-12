@@ -32,4 +32,6 @@ h2 {
   padding: 1rem;
 }
 
-.profile-table > li:last-child { border: none }
+.profile-table > li:last-child {
+  border: none;
+}
