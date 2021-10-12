@@ -1,13 +1,29 @@
-import logo from './logo.png';
-import './App.css';
+import React from 'react';
+import {
+  Switch,
+  Route,
+} from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Profile from './components/Profile';
+import RocketList from './components/Rockets';
+import MissionsLists from './components/Missions';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <RocketList />
+        </Route>
+        <Route exact path="/missions">
+          <MissionsLists />
+        </Route>
+        <Route exact path="/profile">
+          <Profile />
+        </Route>
+      </Switch>
+    </>
   );
 }
 
