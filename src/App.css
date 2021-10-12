@@ -44,3 +44,8 @@ a {
   height: 50px;
   width: 50px;
 }
+
+.active {
+  color: rgb(134, 0, 0);
+  text-decoration: underline;
+}
