@@ -32,4 +32,11 @@
   font-size: 14px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.reserve-button:hover,
+.reserve-button:active {
+  background-color: #056bd8;
+  transition: 0.5s;
 }
