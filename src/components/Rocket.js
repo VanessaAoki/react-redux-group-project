@@ -11,9 +11,9 @@ const Rocket = (props) => {
       <img className="rocket-img" src={flickrImages} alt="rocket-img" />
       <div className="info-container">
         <h2 className="rocket-title">{rocketName}</h2>
-        <h4 className="rocket-description">{rocketDescription}</h4>
+        <p className="rocket-description">{rocketDescription}</p>
+        <button id={rocketId} className="reserve-button">Reserve Rocket</button>
       </div>
-      <button>Reserve Rocket</button>
     </li>
   );
 };
