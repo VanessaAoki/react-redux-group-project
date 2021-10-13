@@ -1,13 +1,13 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-// import rocketsReducer from './Rockets/Rockets-Reducer';
-// import profileReducer from './Profile/Profile-Reducer';
+import rocketsReducer from './Rockets/Rockets-Reducer';
+import profileReducer from './Profile/Profile-Reducer';
 import missionsReducer from './missions/missions';
 
 const reducer = combineReducers({
-  // rocketsReducer,
-  // profileReducer,
+  rockets: rocketsReducer,
+  profile: profileReducer,
   missions: missionsReducer,
   // additional reducers could be added here
 });

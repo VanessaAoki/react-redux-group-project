@@ -27,9 +27,7 @@ const MissionsLists = () => {
         <th>
           Status
         </th>
-        <th>
-          Join
-        </th>
+        <th aria-label="none" />
       </tr>
       {missions.map((mission) => (
         <Missions key={missions.id} data={mission} />
