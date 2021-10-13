@@ -41,6 +41,7 @@ span {
   border: none;
   background-color: grey;
   color: white;
+  cursor: inherit;
 }
 
 .button-join {
@@ -50,4 +51,13 @@ span {
 
 tr:nth-child(even) {
   background-color: rgb(240, 240, 240);
+}
+
+.button-status-active {
+  background-color: rgb(0, 165, 165);
+}
+
+.button-join-active {
+  border: 1.5px solid red;
+  color: red;
 }

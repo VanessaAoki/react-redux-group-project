@@ -17,6 +17,14 @@ const Missions = (props) => {
     dispatch(leaveMissions(id));
   };
 
+  const statusChange = () => {
+    if (status === true) {
+      leaveMissionsButton();
+    } else {
+      joinMissionsButton();
+    }
+  };
+
   return (
     <tr>
       <td>
@@ -26,16 +34,31 @@ const Missions = (props) => {
         {description}
       </td>
       <td className="button-container">
-        <button type="button" className="button-status">
+        <button
+          type="button"
+          className={status
+            ? 'button-status button-status-active'
+            : 'button-status'}
+        >
           <span>
-            NOT A MEMBER
+            {status
+              ? 'Active Member'
+              : 'NOT A MEMBER'}
           </span>
         </button>
       </td>
       <td className="button-container">
-        <button type="button" className="button-join" onClick={status ? leaveMissionsButton : joinMissionsButton}>
+        <button
+          type="button"
+          className={status
+            ? 'button-join button-join-active'
+            : 'button-join'}
+          onClick={statusChange}
+        >
           <span>
-            Join Mission
+            {status
+              ? 'Cancel Mission'
+              : 'Join Mission'}
           </span>
         </button>
       </td>
