@@ -1,14 +1,13 @@
-// Actions
-const GET_ROCKETS = 'Store/Rockets/GET_ROCKETS';
+const GET_ROCKETS = 'SPACE_TRAVELER/ROCKETS/GET_ROCKETS';
 
-const URL = 'https://api.spacexdata.com/v3/rockets';
+const URL = 'https://api.spacexdata.com/v3/rockets/';
+
 const initialState = [];
-// Reducer
+
 const reducer = (state = initialState, action) => {
-  console.log(action.type);
   switch (action.type) {
     case GET_ROCKETS: {
-      return state;
+      return action.state;
     }
     default:
       return state;
@@ -17,20 +16,18 @@ const reducer = (state = initialState, action) => {
 
 export default reducer;
 
-// Action Creators
-
-export const GetRockets = () => async (dispatch) => {
-  const response = await fetch(URL,
-    {
-      method: 'GET',
-    });
-  const rocketsAPI = response.json();
-  console.log(rocketsAPI);
-  // const keys = Object.keys(rocketsAPI);
+export const getRockets = () => async (dispatch) => {
+  const response = await fetch(URL);
+  const rocketsApi = await response.json();
   const state = [];
-  // keys.forEach((key) => {
-  //   state.push({ ...rocketsAPI[key][0], item_id: key });
-  // });
+  rocketsApi.forEach((rocket) => {
+    state.push({
+      id: rocket.id,
+      rocket_name: rocket.rocket_name,
+      description: rocket.description,
+      flickr_images: rocket.flickr_images,
+    });
+  });
   dispatch({
     type: GET_ROCKETS,
     state,
