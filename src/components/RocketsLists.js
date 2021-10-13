@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRockets } from '../redux/Rockets/Rockets-Reducer';
+import './Rockets.css';
+import Rocket from './Rocket';
 
 const RocketsList = () => {
   const dispatch = useDispatch();
@@ -10,15 +12,18 @@ const RocketsList = () => {
   }, []);
 
   const rocketStorage = useSelector((state) => state);
-  console.log(rocketStorage.rocketsReducer);
   return (
     <>
       <h2>Rockets</h2>
-      {/* <div>
-        {rockets.map((rocket) => (
-          <h1 key={rocket.id}>{rocket}</h1>
-        ))}
-      </div> */}
+      {rocketStorage.rockets.map((rocket) => (
+        <Rocket
+          key={rocket.id}
+          rocketId={rocket.id}
+          rocketName={rocket.rocket_name}
+          rocketDescription={rocket.description}
+          flickrImages={rocket.flickr_images}
+        />
+      ))}
     </>
   );
 };

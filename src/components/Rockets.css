@@ -1,0 +1,14 @@
+.rocket-card-container {
+  display: flex;
+  margin: 20px;
+}
+
+.rocket-img {
+  height: 180px;
+  width: 210px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}

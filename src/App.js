@@ -8,7 +8,7 @@ import {
 import configureStore from './redux/configureStore';
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
-import RocketList from './components/Rockets';
+import RocketList from './components/RocketsLists';
 import MissionsLists from './components/MissionsLists';
 
 function App() {
