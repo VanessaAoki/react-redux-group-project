@@ -3,12 +3,12 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import rocketsReducer from './Rockets/Rockets-Reducer';
 import profileReducer from './Profile/Profile-Reducer';
-import missionsReducer from './Missions/Missions-Reducer';
+import missionsReducer from './missions/missions';
 
 const reducer = combineReducers({
-  rocketsReducer,
-  profileReducer,
-  missionsReducer,
+  rockets: rocketsReducer,
+  profile: profileReducer,
+  missions: missionsReducer,
   // additional reducers could be added here
 });
 

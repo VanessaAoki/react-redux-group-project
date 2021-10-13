@@ -4,6 +4,7 @@ import React from 'react';
 const RocketsList = () => {
   // const dispatch = useDispatch();
   const x = 0;
+  // eslint-disable-next-line no-console
   console.log(x);
   // const getRocketsAPI = () {}
   return (
