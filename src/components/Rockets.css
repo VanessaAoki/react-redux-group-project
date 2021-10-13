@@ -1,0 +1,42 @@
+.rocket-card-container {
+  display: flex;
+  margin: 20px;
+  font-family: sans-serif;
+}
+
+.rocket-img {
+  height: 180px;
+  width: 210px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.rocket-title {
+  margin: -8px 0 0 0;
+}
+
+.rocket-description {
+  margin: 10px 0 0 9px;
+}
+
+.reserve-button {
+  width: 190px;
+  height: 50px;
+  margin: 20px 0 0 9px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reserve-button:hover,
+.reserve-button:active {
+  background-color: #056bd8;
+  transition: 0.5s;
+}

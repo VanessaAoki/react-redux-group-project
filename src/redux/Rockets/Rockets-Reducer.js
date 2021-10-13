@@ -1,23 +1,12 @@
-/* eslint-disable no-undef */
-// Some default code
+const GET_ROCKETS = 'SPACE_TRAVELER/ROCKETS/GET_ROCKETS';
 
-// Actions
+const URL = 'https://api.spacexdata.com/v3/rockets/';
 
 const initialState = [];
 
-// Reducer
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case 1: {
-      return (
-        newState
-      );
-    }
-
-    case 2: {
-      return newState;
-    }
-    case 3: {
+    case GET_ROCKETS: {
       return action.state;
     }
     default:
@@ -27,4 +16,20 @@ const reducer = (state = initialState, action) => {
 
 export default reducer;
 
-// Action Creators
+export const getRockets = () => async (dispatch) => {
+  const response = await fetch(URL);
+  const rocketsApi = await response.json();
+  const state = [];
+  rocketsApi.forEach((rocket) => {
+    state.push({
+      id: rocket.id,
+      rocket_name: rocket.rocket_name,
+      description: rocket.description,
+      flickr_images: rocket.flickr_images,
+    });
+  });
+  dispatch({
+    type: GET_ROCKETS,
+    state,
+  });
+};
