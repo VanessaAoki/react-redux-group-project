@@ -1,5 +1,4 @@
-/* eslint-disable */
-
+/* eslint-disable no-undef */
 // Some default code
 
 // Actions
