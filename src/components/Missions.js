@@ -10,7 +10,6 @@ const Missions = (props) => {
   const dispatch = useDispatch();
 
   const joinMissionsButton = () => {
-    console.log('wrkng');
     dispatch(joinMissions(id));
   };
 
