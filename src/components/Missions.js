@@ -13,6 +13,8 @@ const Missions = (props) => {
       <td>
         {description}
       </td>
+      <td />
+      <td />
     </tr>
   );
 };

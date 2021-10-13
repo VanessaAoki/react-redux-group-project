@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadMissionsData } from '../redux/missions/missions';
 import Missions from './Missions';
+import './Missions.css';
 
 const MissionsLists = () => {
   const missions = useSelector((state) => state.missions);
@@ -15,15 +16,20 @@ const MissionsLists = () => {
   }, []);
 
   return (
-    <table className="container">
+    <table className="list-container">
       <tr>
-        <td>
+        <th>
           Mission
-        </td>
-        <td>
+        </th>
+        <th>
           Description
-        </td>
-        <td />
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+          Join
+        </th>
       </tr>
       {missions.map((mission) => (
         <Missions key={missions.id} data={mission} />

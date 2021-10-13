@@ -3,6 +3,7 @@ body {
   padding: 0;
   background-color: #f7f7f7;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 li {
