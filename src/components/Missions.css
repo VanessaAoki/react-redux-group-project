@@ -41,6 +41,7 @@ span {
   border: none;
   background-color: grey;
   color: white;
+  cursor: inherit;
 }
 
 .button-join {
