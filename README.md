@@ -13,6 +13,10 @@
   </a>
 </p>
 
+## Live Version
+
+[Visit Live Demo Link](http://VanessaAoki.github.io/react-redux-group-project)
+
 # Space Travelers' Hub
 Space Travelers' Hub is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
