@@ -8,6 +8,9 @@ const initialState = [];
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ROCKETS: {
+      if (state.length > 1) {
+        return state;
+      }
       return action.state;
     }
     case RESERVE_ROCKETS: {

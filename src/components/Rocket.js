@@ -39,13 +39,4 @@ const Rocket = (props) => {
   return rocketContainer;
 };
 
-Rocket.propTypes = {
-  data: PropTypes.shape({
-    rocketId: PropTypes.string.isRequired,
-    rocketName: PropTypes.string.isRequired,
-    rocketDescription: PropTypes.string.isRequired,
-    flickrImages: PropTypes.string.isRequired,
-  }).isRequired,
-};
-
 export default Rocket;
