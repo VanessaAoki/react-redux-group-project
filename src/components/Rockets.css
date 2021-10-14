@@ -16,11 +16,12 @@
 }
 
 .rocket-title {
-  margin: -8px 0 0 0;
+  margin: -16px 0 0 0;
 }
 
 .rocket-description {
   margin: 10px 0 0 9px;
+  line-height: 30px;
 }
 
 .reserve-button {
@@ -38,5 +39,28 @@
 .reserve-button:hover,
 .reserve-button:active {
   background-color: #056bd8;
+  transition: 0.5s;
+}
+
+.reserved-span {
+  background-color: #18a2b8;
+  padding: 7px;
+  color: white;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: bolder;
+  transition: 0.5s;
+}
+
+.reserved-button {
+  width: 190px;
+  height: 50px;
+  margin: 20px 0 0 9px;
+  background-color: white;
+  color: gray;
+  font-size: 14px;
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 5px;
+  cursor: pointer;
   transition: 0.5s;
 }
