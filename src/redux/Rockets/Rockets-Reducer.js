@@ -1,5 +1,5 @@
 const GET_ROCKETS = 'SPACE_TRAVELER/ROCKETS/GET_ROCKETS';
-const RESERVE_ROCKETS = 'SPACE_TRAVELER/ROCKETS/RESERVE_ROCKETS'
+const RESERVE_ROCKETS = 'SPACE_TRAVELER/ROCKETS/RESERVE_ROCKETS';
 
 const URL = 'https://api.spacexdata.com/v3/rockets/';
 
@@ -11,7 +11,13 @@ const reducer = (state = initialState, action) => {
       return action.state;
     }
     case RESERVE_ROCKETS: {
-      return action.state;
+      const newState = state.map((rocket) => {
+        if (rocket.id !== Number(action.payload.id)) {
+          return rocket;
+        }
+        return { ...rocket, reserved: true };
+      });
+      return newState;
     }
     default:
       return state;
@@ -38,9 +44,9 @@ export const getRockets = () => async (dispatch) => {
   });
 };
 
-export const reserveRocket = () => {
+export const reserveRockets = (payload) => (dispatch) => {
   dispatch({
     type: RESERVE_ROCKETS,
-    state,
+    payload,
   });
-}
+};
