@@ -4,6 +4,7 @@ import './Profile.css';
 
 const Profile = () => {
   const missions = useSelector((state) => state.missions);
+  const rocketStorage = useSelector((state) => state);
 
   const joinedMissions = missions.filter((mission) => {
     if (mission.status === true) {
@@ -27,9 +28,14 @@ const Profile = () => {
       <section className="profile-rockets">
         <h2>My Rockets</h2>
         <ul className="profile-table">
-          <li>Telstar</li>
-          <li>Telstar</li>
-          <li>Telstar</li>
+          {rocketStorage.rockets.map((rocket) => {
+            if (rocket.reserved === true) {
+              return (
+                <li>{rocket.rocket_name}</li>
+              );
+            }
+            return false;
+          })}
         </ul>
       </section>
     </div>
