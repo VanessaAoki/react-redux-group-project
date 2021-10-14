@@ -28,9 +28,9 @@ const Missions = (props) => {
   return (
     <tr>
       <td>
-        <b>{missionName}</b>
+        <b id="missionName">{missionName}</b>
       </td>
-      <td>
+      <td id="missionDescription">
         {description}
       </td>
       <td className="button-container">
