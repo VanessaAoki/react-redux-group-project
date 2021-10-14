@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-redux-group-project/static/css/main.a27ba613.chunk.css",
+    "main.js": "/react-redux-group-project/static/js/main.3c7d47f5.chunk.js",
+    "main.js.map": "/react-redux-group-project/static/js/main.3c7d47f5.chunk.js.map",
+    "runtime-main.js": "/react-redux-group-project/static/js/runtime-main.ce86b866.js",
+    "runtime-main.js.map": "/react-redux-group-project/static/js/runtime-main.ce86b866.js.map",
+    "static/js/2.1c9f2b77.chunk.js": "/react-redux-group-project/static/js/2.1c9f2b77.chunk.js",
+    "static/js/2.1c9f2b77.chunk.js.map": "/react-redux-group-project/static/js/2.1c9f2b77.chunk.js.map",
+    "index.html": "/react-redux-group-project/index.html",
+    "static/css/main.a27ba613.chunk.css.map": "/react-redux-group-project/static/css/main.a27ba613.chunk.css.map",
+    "static/js/2.1c9f2b77.chunk.js.LICENSE.txt": "/react-redux-group-project/static/js/2.1c9f2b77.chunk.js.LICENSE.txt",
+    "static/js/main.3c7d47f5.chunk.js.LICENSE.txt": "/react-redux-group-project/static/js/main.3c7d47f5.chunk.js.LICENSE.txt",
+    "static/media/planet-logo.3f6fb274.png": "/react-redux-group-project/static/media/planet-logo.3f6fb274.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ce86b866.js",
+    "static/js/2.1c9f2b77.chunk.js",
+    "static/css/main.a27ba613.chunk.css",
+    "static/js/main.3c7d47f5.chunk.js"
+  ]
+}
