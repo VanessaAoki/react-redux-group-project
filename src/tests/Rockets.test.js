@@ -13,34 +13,33 @@ describe('Unit tests for rockets', () => {
     {
       id: 2,
       rocket_name: '2',
-    }
-  ]
+    },
+  ];
 
-  const reserveRockets = (payload) => {
-    return({
-      type: RESERVE_ROCKETS,
-      payload,
-    });
-  };
-  const getRockets = (payload) => {
-    return({
-      type: GET_ROCKETS,
-      payload,
-    });
-  };
+  const reserveRockets = (payload) => ({
+    type: RESERVE_ROCKETS,
+    payload,
+  });
+  const getRockets = (payload) => ({
+    type: GET_ROCKETS,
+    payload,
+  });
 
   describe('Reducers', () => {
     it('returns the correct state for GET_ROCKETS action', () => {
-      expect(rocketsReducer(state, { type: GET_ROCKETS, state: {
-        id: 3,
-        rocket1: '3',
-        rocket_name: '3',
-      } })).toEqual([{"id": 1, "rocket_name": "1"}, {"id": 2, "rocket_name": "2"}]);
+      expect(rocketsReducer(state, {
+        type: GET_ROCKETS,
+        state: {
+          id: 3,
+          rocket1: '3',
+          rocket_name: '3',
+        },
+      })).toEqual([{ id: 1, rocket_name: '1' }, { id: 2, rocket_name: '2' }]);
     });
     it('returns the correct state for RESERVE_ROCKETS action', () => {
-      const payload = { id: 1 }
-      expect(rocketsReducer(state, { type: RESERVE_ROCKETS, payload})).toEqual(
-        [{"id": 1, "reserved": true, "rocket_name": "1"}, {"id": 2, "rocket_name": "2"}]
+      const payload = { id: 1 };
+      expect(rocketsReducer(state, { type: RESERVE_ROCKETS, payload })).toEqual(
+        [{ id: 1, reserved: true, rocket_name: '1' }, { id: 2, rocket_name: '2' }],
       );
     });
   });
@@ -54,4 +53,3 @@ describe('Unit tests for rockets', () => {
     });
   });
 });
-
