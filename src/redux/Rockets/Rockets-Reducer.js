@@ -12,11 +12,16 @@ const reducer = (state = initialState, action) => {
     }
     case RESERVE_ROCKETS: {
       const newState = state.map((rocket) => {
-        if (rocket.id !== Number(action.payload.id)) {
+        if (rocket.id !== Number(action.payload.id) && !rocket.reserved) {
           return rocket;
+        } if (rocket.reserved === true) {
+          return { ...rocket, reserved: false };
         }
         return { ...rocket, reserved: true };
       });
+      // if (action.payload.reserved === true) {
+      //   return action.payload.reserved = false;
+      // }
       return newState;
     }
     default:
