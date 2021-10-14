@@ -6,7 +6,7 @@
     <img alt="MIT Licensed" src="https://img.shields.io/github/license/VanessaAoki/react-redux-group-project?style=flat-square">
   </a>
   <a href="https://github.com/VanessaAoki/react-redux-group-project">
-    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/VanessaAoki/react-redux-group-project/main?color=blue&style=flat-square">
+    <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/VanessaAoki/react-redux-group-project/development?color=blue&style=flat-square">
   </a>
   <a href="https://github.com/VanessaAoki/react-redux-group-project">
     <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/VanessaAoki/react-redux-group-project?color=pink&label=%E2%98%85%20stars%20&style=flat-square">
