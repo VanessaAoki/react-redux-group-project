@@ -1,10 +1,19 @@
 /* eslint-disable */
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRockets } from '../redux/Rockets/Rockets-Reducer';
 
 const Rocket = (props) => {
   const {
     rocketId, rocketName, rocketDescription, flickrImages,
   } = props;
+  const dispatch = useDispatch();
+  const reserveRocket = (e) => {
+    const reserveThisRocket = {
+      id: e.target.id,
+    };
+    dispatch(reserveRockets(reserveThisRocket))
+  }
 
   return (
     <li id={rocketId} className="rocket-card-container">
@@ -12,7 +21,7 @@ const Rocket = (props) => {
       <div className="info-container">
         <h2 className="rocket-title">{rocketName}</h2>
         <p className="rocket-description">{rocketDescription}</p>
-        <button id={rocketId} className="reserve-button">Reserve Rocket</button>
+        <button id={rocketId} className="reserve-button" onClick={reserveRocket}>Reserve Rocket</button>
       </div>
     </li>
   );
