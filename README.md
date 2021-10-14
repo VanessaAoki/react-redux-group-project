@@ -19,6 +19,12 @@ Space Travelers' Hub is a web application for a company that provides commercial
 <p align="center">
   <img src="./docs/screenshot.png" alt="screenshot" width="800">
 </p>
+<p align="center">
+  <img src="./docs/Rockets-Screenshot.png" alt="screenshot" width="800">
+</p>
+<p align="center">
+  <img src="./docs/My-Profile-Screenshot.png" alt="screenshot" width="800">
+</p>
 
 ## Built With
 
