@@ -2,9 +2,6 @@
   <a href="https://www.microverse.org/">
     <img alt="Microverse" src="https://img.shields.io/badge/-Microverse-blueviolet?style=flat-square">
   </a>
-  <a href="https://github.com/VanessaAoki/react-redux-group-project/blob/master/LICENSE">
-    <img alt="MIT Licensed" src="https://img.shields.io/github/license/VanessaAoki/react-redux-group-project?style=flat-square">
-  </a>
   <a href="https://github.com/VanessaAoki/react-redux-group-project">
     <img alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/VanessaAoki/react-redux-group-project/development?color=blue&style=flat-square">
   </a>
